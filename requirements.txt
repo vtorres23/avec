@@ -1,0 +1,4 @@
+django==1.9.1
+django-widget_tweaks
+Pillow
+django-allauth
