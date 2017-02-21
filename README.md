@@ -8,21 +8,24 @@ To run this project you need to have:
 
 1. Install the depedencies above
 1. Clone the project
-$ git clone git@github.com:Helabs/avec.git
+
+        $ git clone git@github.com:Helabs/avec.git
 
 1. Go into the project folder
-$ cd avec
+
+        $ cd avec
 
 1. Install the dependencies and run migrates
-$ make setup
 
+        $ make setup
 
 If everything goes OK, you can now run the project!
 
 ## Running the project
 
 1. Start the server.
-$ make run
+
+        $ make run
 
 1. Open [http://localhost:8000](http://localhost:8000).
 
