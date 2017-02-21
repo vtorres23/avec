@@ -1,1 +1,1 @@
-web: make run
+web: make setup && make run
