@@ -1,3 +1,35 @@
+## Dependencies
+
+To run this project you need to have:
+
+- Python 2.7.x
+
+## Setup the project
+
+1. Install the depedencies above
+1. Clone the project
+  $ git clone git@github.com:Helabs/avec.git
+
+1. Go into the project folder
+  $ cd avec
+
+1. Install the dependencies and run migrates
+  $ make setup
+
+
+If everything goes OK, you can now run the project!
+
+## Running the project
+
+1. Start the server.
+  $ make run
+
+1. Open [http://localhost:8000](http://localhost:8000).
+
+
+===================
+
+
 Django on OpenShift
 ===================
 
@@ -41,7 +73,7 @@ Running on OpenShift
 Create an account at https://www.openshift.com
 
 Install the RHC client tools if you have not already done so:
-    
+
     sudo gem install rhc
     rhc setup
 
@@ -59,9 +91,9 @@ Then push the repo upstream
 
     git push
 
-Now, you have to create [admin account](#admin-user-name-and-password), so you 
+Now, you have to create [admin account](#admin-user-name-and-password), so you
 can setup your Django instance.
-	
+
 That's it. You can now checkout your application at:
 
     http://django-$yournamespace.rhcloud.com
