@@ -1,0 +1,19 @@
+{
+  "name": "avec",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Helabs/avec",
+  "authors": [
+    "Ricardo Gonçalves <ricardo.goncalves.com.br>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.3"
+  }
+}
