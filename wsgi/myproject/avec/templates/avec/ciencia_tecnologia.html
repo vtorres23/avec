@@ -1,0 +1,18 @@
+{% extends 'avec/base.html' %}
+{% load staticfiles %}
+{% block content %}
+	{% for post in posts %}
+					<div class="row" style="padding-top: 20px">
+						<div class="col-sm-2">
+						<a href="{{post.link}}"><img src="{% static 'img/fs-line.png' %}" alt="" style="width:60%"/></a>
+						</div>
+						<div class="col-sm-10">
+						<div class="author_dec">
+							<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+							<a href="{{post.link}}"><p>{{ post.text|linebreaksbr }}</p></a>
+							<p>published: {{ post.published_date }}</p>
+						</div>
+					   </div>
+					</div>
+	{% endfor %}
+{% endblock content %}

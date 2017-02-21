@@ -1,0 +1,18 @@
+import glob
+import pandas as pd
+import numpy as np
+import codecs, shutil
+import sys, shutil
+import os.path
+
+var = pd.read_csv(r'D:\teste\sinopse_estatistica_da_educacao_basica_2015.csv', sep=",", encoding='latin1')
+
+df2 = pd.melt(var, id_vars=["Ano", "Regiao" , "UF" , "Municipio"], 
+                  var_name="Atributo", value_name="Valor")
+
+
+df2 = df2.sort(["Ano", "Regiao" , "UF" , "Municipio"])
+
+del df2['Regiao']
+
+df2.to_csv(r'D:\teste\sinopse_estatistica_da_educacao_basica_2015_new.csv', sep=";",  index=False)

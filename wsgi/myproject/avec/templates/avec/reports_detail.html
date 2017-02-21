@@ -1,0 +1,57 @@
+{% extends 'avec/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="row">
+			<div class="title_sec">
+				
+				<!--<h2> estatísticas e informações sobre {{mysubject.title}} </h2>-->
+			</div>		
+			<div class="col-sm-8 ">
+			
+				<div class="sngl_blg">										
+					<div class="post_info">
+						<div class="post_intro">
+							<h2>{{report.title}}</h2>
+							<i class="fa fa-heartbeat"></i>									
+						</div>
+					</div>
+					<div class="post_content">
+						<p align=justify>{{report.text|linebreaks}}
+						</p>
+						</br>
+						<p>Veja uma amostra do arquivo</p>
+						<a href="{% static 'img/'%}{{report.pdf.url}}"><img src="{% static 'img/icons/PDF.png' %}"></img></a>
+						</br>
+						<p>para download completo, torne-se assinante premium</p>						
+					</div>
+				</div>					
+			
+
+			</div>				
+			
+			<div class="col-sm-4">
+				<div class="sidebar">						
+			
+					<div class="widget">
+						<h2>{{mysubject.title}}</h2>
+						<div class="title_br"></div>
+						<ul>
+							{% for sub in mysubdetail %}
+								<li><a href="{% url 'subsubject_detail'  pk=sub.pk %}">{{sub.title}}</a></li>
+							{% endfor %}	
+						</ul>
+					</div>					
+
+					<div class="widget">
+						<h2>palavras-chaves</h2>
+						<div class="title_br"></div>
+						<ul class="tag">
+							{% for key in mykeywords %}
+								<li><a href="{% url 'keywords_detail' pk=key.pk %}">{{key.title}}</a></li>
+							{% endfor %}
+						</ul>
+					</div>					
+				</div>
+			</div>	
+		</div>
+{% endblock content %}

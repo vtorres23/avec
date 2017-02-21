@@ -1,0 +1,53 @@
+{% extends 'avec/base_infograficos.html' %}
+{% load staticfiles %}
+{% block content %}
+
+   <head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link type="text/css" href="http://foo-embrasilia.rhcloud.com/open/cienciaetecnologia/Pesquisadores-Estrangeiros-por-Pas-de-Origem/css/player.css?v=92" rel="stylesheet" />-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="http://foo-embrasilia.rhcloud.com/open/cienciaetecnologia/Pesquisadores-Estrangeiros-por-Pas-de-Origem/js/libs.js?v=92"></script>
+    <script src="http://foo-embrasilia.rhcloud.com/open/cienciaetecnologia/Pesquisadores-Estrangeiros-por-Pas-de-Origem/js/player.js?v=92"></script>
+
+	<script>
+		var imguser = "{% static 'img/user/' %}";
+		var img = "{% static 'img/' %}";
+	</script>
+
+	<p>{% autoescape on %}{{ post.html|safe }}{% endautoescape %} </p>			
+
+    <head>	
+{% endblock %}
+{% block other %}
+
+			<div class="sidebar">								
+				<div class="widget">
+				{% for par in myparent %}
+					<h2>{{par.title}}</h2>
+				{% endfor %}		
+					<div class="title_br"></div>
+					<ul>
+						{% for sub in related %}
+							<li><a href="{% url 'subsubject_detail'  pk=sub.pk %}">{{sub.title}}</a></li>
+						{% endfor %}	
+					</ul>
+				</div>					
+
+				<div class="widget">
+					<h2>palavras-chaves</h2>
+					<div class="title_br"></div>
+					<ul class="tag">
+						{% for key in mykeywords %}
+							<li><a href="{% url 'keywords_detail' pk=key.pk %}">{{key.title}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>						
+			</div>
+
+{% endblock %}
+

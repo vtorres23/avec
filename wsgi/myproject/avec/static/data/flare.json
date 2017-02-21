@@ -1,0 +1,365 @@
+{
+ "name": "Brasil",
+ "children": [
+  {
+   "name": "Norte",
+   "children": [
+    {
+     "name": "Amazonas",
+     "children": [
+      {"name": "contratos tecn.", "value": 54},
+      {"name": "desenhos indust.", "value": 11},
+      {"name": "indic. geo", "value": 1},
+      {"name": "marcas", "value": 657},
+	  {"name": "patentes", "value": 30},
+      {"name": "progr comp.", "value": 18},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Roraima",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 0},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 83},
+	  {"name": "patentes", "value": 0},
+      {"name": "progr comp.", "value": 0},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Amapa",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 0},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 84},
+	  {"name": "patentes", "value": 2},
+      {"name": "progr comp.", "value": 2},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Para",
+     "children": [
+      {"name": "contratos tecn.", "value": 1},
+      {"name": "desenhos indust.", "value": 19},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 689},
+	  {"name": "patentes", "value": 42},
+      {"name": "progr comp.", "value": 14},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Tocantins",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 2},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 244},
+	  {"name": "patentes", "value": 13},
+      {"name": "progr comp.", "value": 4},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },	
+		{
+     "name": "Rondonia",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 2},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 314},
+	  {"name": "patentes", "value": 28},
+      {"name": "progr comp.", "value": 1},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+    {
+     "name": "Acre",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 0},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 86},
+	  {"name": "patentes", "value": 3},
+      {"name": "progr comp.", "value": 0},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    }
+   ]
+  },
+   {
+   "name": "Nordeste",
+   "children": [
+    {
+     "name": "Maranhao",
+     "children": [ 
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 2},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 502},
+	  {"name": "patentes", "value": 57},
+      {"name": "progr comp.", "value": 21},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Piaui",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 1},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 336},
+	  {"name": "patentes", "value": 25},
+      {"name": "progr comp.", "value": 12},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Ceara",
+     "children": [ 
+      {"name": "contratos tecn.", "value": 1},
+      {"name": "desenhos indust.", "value": 198},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 2992},
+	  {"name": "patentes", "value": 134},
+      {"name": "progr comp.", "value": 25},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Rio Grande do Norte",
+     "children": [
+      {"name": "contratos tecn.", "value": 1},
+      {"name": "desenhos indust.", "value": 0},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 890},
+	  {"name": "patentes", "value": 55},
+      {"name": "progr comp.", "value": 22},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Pernambuco",
+     "children": [
+      {"name": "contratos tecn.", "value": 5},
+      {"name": "desenhos indust.", "value": 15},
+      {"name": "indic. geo", "value": 1},
+      {"name": "marcas", "value": 2826},
+	  {"name": "patentes", "value": 170},
+      {"name": "progr comp.", "value": 56},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },	
+		{
+     "name": "Paraiba",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 11},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 929},
+	  {"name": "patentes", "value": 74},
+      {"name": "progr comp.", "value": 12},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+		{
+     "name": "Sergipe",
+     "children": [
+      {"name": "contratos tecn.", "value": 4},
+      {"name": "desenhos indust.", "value": 7},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 322},
+	  {"name": "patentes", "value": 28},
+      {"name": "progr comp.", "value": 16},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },	
+		{
+     "name": "Alagoas",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 3},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 632},
+	  {"name": "patentes", "value": 40},
+      {"name": "progr comp.", "value": 9},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+    {
+     "name": "Bahia",
+     "children": [
+      {"name": "contratos tecn.", "value": 18},
+      {"name": "desenhos indust.", "value": 33},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 3606},
+	  {"name": "patentes", "value": 152},
+      {"name": "progr comp.", "value": 36},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    }
+   ]
+  }
+  ,
+   {
+   "name": "Centro-Oeste",
+   "children": [
+{
+     "name": "Mato Grosso",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 3},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 1543},
+	  {"name": "patentes", "value": 47},
+      {"name": "progr comp.", "value": 11},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },	
+		{
+     "name": "Mato Grosso do Sul",
+     "children": [
+      {"name": "contratos tecn.", "value": 0},
+      {"name": "desenhos indust.", "value": 9},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 1249},
+	  {"name": "patentes", "value": 51},
+      {"name": "progr comp.", "value": 15},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+	{
+     "name": "Goias",
+     "children": [
+      {"name": "contratos tecn.", "value": 7},
+      {"name": "desenhos indust.", "value": 20},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 3867},
+	  {"name": "patentes", "value": 130},
+      {"name": "progr comp.", "value": 23},
+      {"name": "topog circuitos", "value": 0}
+     ]
+    },
+    {
+     "name": "Distrito Federal",
+     "children": [
+      {"name": "contratos tecn.", "value": 8},
+      {"name": "desenhos indust.", "value": 19},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 3138},
+	  {"name": "patentes", "value": 122},
+      {"name": "progr comp.", "value": 76},
+      {"name": "topog circuitos", "value": 0}
+
+     ]
+    }
+   ]
+  }
+  ,
+   {
+   "name": "Sudeste",
+   "children": [
+{
+     "name": "Sao Paulo",
+     "children": [
+      {"name": "contratos tecn.", "value": 397},
+      {"name": "desenhos indust.", "value": 1291},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 48674},
+	  {"name": "patentes", "value": 2431},
+      {"name": "progr comp.", "value": 604},
+      {"name": "topog circuitos", "value": 1}
+
+     ]
+    },	
+		{
+     "name": "Rio de Janeiro",
+     "children": [
+      {"name": "contratos tecn.", "value": 120},
+      {"name": "desenhos indust.", "value": 117},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 13056},
+	  {"name": "patentes", "value": 807},
+      {"name": "progr comp.", "value": 169},
+      {"name": "topog circuitos", "value": 0}
+
+     ]
+    },
+	{
+     "name": "Espirito Santo",
+     "children": [
+      {"name": "contratos tecn.", "value": 6},
+      {"name": "desenhos indust.", "value": 25},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 2073},
+	  {"name": "patentes", "value": 178},
+      {"name": "progr comp.", "value": 20},
+      {"name": "topog circuitos", "value": 1}
+
+     ]
+    },
+    {
+     "name": "Minas Gerais",
+     "children": [
+      {"name": "contratos tecn.", "value": 75},
+      {"name": "desenhos indust.", "value": 277},
+      {"name": "indic. geo", "value": 1},
+      {"name": "marcas", "value": 11786},
+	  {"name": "patentes", "value": 711},
+      {"name": "progr comp.", "value": 180},
+      {"name": "topog circuitos", "value": 0}
+
+     ]
+    }
+   ]
+  }
+  ,
+   {
+   "name": "Sul",
+   "children": [
+		{
+     "name": "Parana",
+     "children": [
+      {"name": "contratos tecn.", "value": 28},
+      {"name": "desenhos indust.", "value": 340},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 10751},
+	  {"name": "patentes", "value": 670},
+      {"name": "progr comp.", "value": 92},
+      {"name": "topog circuitos", "value": 2}
+
+     ]
+    },
+	{
+     "name": "Rio Grande do Sul",
+     "children": [
+      {"name": "contratos tecn.", "value": 31},
+      {"name": "desenhos indust.", "value": 382},
+      {"name": "indic. geo", "value": 0},
+      {"name": "marcas", "value": 7883},
+	  {"name": "patentes", "value": 753},
+      {"name": "progr comp.", "value": 100},
+      {"name": "topog circuitos", "value": 5}
+
+     ]
+    },
+    {
+     "name": "Santa Catarina",
+     "children": [
+      {"name": "contratos tecn.", "value": 18},
+      {"name": "desenhos indust.", "value": 348},
+      {"name": "indic. geo", "value": 1},
+      {"name": "marcas", "value": 7557},
+	  {"name": "patentes", "value": 528},
+      {"name": "progr comp.", "value": 72},
+      {"name": "topog circuitos", "value": 0}
+
+     ]
+    }
+   ]
+  }
+ ]
+}

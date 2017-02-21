@@ -1,0 +1,13 @@
+"detalhe","origem","personalidade","patente_invencao","modelo_utilidade","certificado_adicao","total_geral"
+"Pessoa Fisica","Nao Residente","Pessoa Fisica",452,21,0,473
+"Pessoa Juridica","Nao Residente","Pessoa Juridica",20355,92,5,20452
+"Pessoa Fisica","Residente","Pessoa Fisica",2387,1772,37,4196
+"Associacao com intuito nao economico","Residente","Pessoa Juridica",64,6,1,71
+"Sociedade com intuito nao economico","Residente","Pessoa Juridica",40,2,1,43
+"Cooperativa assim definida em lei","Residente","Pessoa Juridica",0,0,0,0
+"Instituicao de Ensino e Pesquisa","Residente","Pessoa Juridica",612,48,3,663
+"Orgao Publico","Residente","Pessoa Juridica",357,14,2,373
+"Microempreendedor Individual  MEI","Residente","Pessoa Juridica",60,32,0,92
+"Microempresa assim definida em lei","Residente","Pessoa Juridica",220,195,4,419
+"Empresa de Pequeno Porte assim definidas em lei","Residente","Pessoa Juridica",102,133,1,236
+"Pessoa Juridica","Residente","Pessoa Juridica",822,355,11,1188

@@ -1,0 +1,591 @@
+{% extends 'avec/base_dashboard.html' %}
+{% load staticfiles %}
+{% block content %}
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>AVEC - Ciencia de dados</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />		
+
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/keen-dashboards.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/dc.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/dataTables.bootstrap.css' %}"/>	  	
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+   <!-- <link href="css/style2.css" rel="stylesheet">-->
+   
+    <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-1.9.1.min.js' %}"></script>	
+   
+	<script type="text/javascript" src="{% static 'js/jquery.dataTables.js' %}"></script>	
+    <script src="{% static 'js/colorbrewer.js' %}"></script>
+    <script src="{% static 'data/world-countries.json' %}"></script>
+	
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/d3.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/crossfilter.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/dc.js' %}"></script>		
+	<script type="text/javascript" src="{% static 'js/dataTables.bootstrap.js' %}"></script>
+	<script src="{% static 'js/cloud.js' %}"></script>
+   <!--<script type="text/javascript" src="http://www.kunalbabre.com/projects/table2CSV.js" > </script> 	-->
+
+	<!--  <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>-->
+	<link rel="stylesheet" href="{% static 'css/dc.css' %}" />
+	
+	<script>
+		var Taxa_natalidade_brasil_mundo = "{% static 'data/Taxa_natalidade_brasil_mundo.csv' %}";
+		var nascidosvivosUF_novotestar = "{% static 'data/nascidosvivosUF_novotestar.csv' %}";
+		var taxa_bruta_natalidade_br_brics_al = "{% static 'data/taxa_bruta_natalidade_br_brics_al.csv' %}";		
+		var uf_json = "{% static 'data/uf.json' %}";		
+		var brazil_json = "{% static 'data/brazil.json' %}";			
+	</script>
+
+<style>
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 1.5px solid #ccc;
+    border-radius: 2px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('search.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+	
+    div.tooltip  { color: #222; background: #fff; padding: .5em; text-shadow: #f5f5f5 0 1px 0;
+                   border-radius: 2px; box-shadow: 0px 0px 2px 0px #a6a6a6; opacity: 0.9; position: absolute; }
+    div.tooltip .sep { color: #444; font-weight: 300; }
+    path.country { fill: #e7eaef; stroke: none; }
+    text.legend  { fill: #242930; }
+	
+	
+	#chart-06,  #chart-07,  #chart-08,  #chart-09{
+        background: #899296;
+        width: 100%;
+        font-size: 64px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 100px;
+        height: 40px;
+        line-height: normal;
+		margin-bottom: 15px;
+      }
+	
+    #labelchart01{
+		text-align: center;
+		font-size: 1em;
+	}
+	#labelchart02, #labelchart03, #labelchart04{
+		text-align: center;
+		font-size: 0.9em;
+	}
+	
+	#brancaChart,  #pretaChart,  #amarelaChart,  #indigenaChart,  #pardaChart, #chart15 , #chart16, #chart17, #chart18, #chart19, #chart20
+	, #chart21, #chart22, #chart23, #chart24, #chart25, #chart26{
+        background: #e2e2e2;
+        width: 100%;
+        font-size: 12x;
+        text-align: center;
+		padding-left: 2px;
+        padding-top: 2px;
+        padding-bottom: 5px;
+        height: 20px;
+        line-height: normal;
+		margin-bottom: 2px;
+		padding: center;
+      }
+	  
+	  	#svg-map path { fill:#d3d3d3 }
+		#svg-map text { fill:#fff; font:12px Arial-BoldMT, sans-serif; cursor:pointer }
+		#svg-map a{ text-decoration:none }
+		#svg-map a:hover { cursor:pointer; text-decoration:none }
+		#svg-map a:hover path{ fill:#b7c3c8 !important }
+		#svg-map .circle { fill:#899296 }
+		#svg-map a:hover .circle { fill:#b7c3c8 !important; cursor:pointer }
+		
+		@import url(/style.css);
+
+#chart {
+  margin-left: -40px;
+  height: 506px;
+}
+
+text {
+  font: 10px sans-serif;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font: 500 110px "Helvetica Neue";
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+
+
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url(../img/load_avec.gif) center no-repeat #fff;
+}
+	</style>
+<script>
+//paste this code under the head tag or in a separate js file.
+	// Wait for window load
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});</script>
+  </head>
+  <body>
+<div class="se-pre-con"></div>
+  
+  
+	<div class="title_sec" style="    padding-top: 20px;">
+				<h1>Nascidos Vivos</h1>
+				<h2>estatisticas e informacoes sobre registro civil</h2>
+	</div>
+<div class="container-fluid">
+    <div class="row">
+		<div class="col-sm-10">
+			<div class="row">
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+				  <h1 id="labelchart01">Quantidade de Nascidos</h1>
+				  <div id="chart-06"></div>
+				</div>
+			  </div>
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+				   	<h1 id="labelchart01">Masculino</h1>
+				   <div id="chart-07"></div>
+				</div>
+			  </div>
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+					<h1 id="labelchart01">Feminino</h1>
+				   <div id="chart-08"></div>
+				</div>
+			  </div>
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+					<h1 id="labelchart01">Cesario</h1>
+				   <div id="chart-09"></div>
+				</div>
+			  </div>
+			</div>
+			<div class="row">
+			  <div class="col-sm-6">
+				<div class="chart-wrapper">
+				  <div class="chart-title">
+					Nascimentos por ano
+				  </div>
+				  <div class="chart-stage">
+						<div id="chart-01"></div>
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+				  <div class="chart-title" id="mapa">
+					Nascimentos por UF
+				  </div>
+				  <div class="chart-stage">
+					<div id="us-chart">
+						<strong>Selecione o estado que deseja filtrar</strong>
+						<a class="reset" href="javascript:usChart.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+						<span class="reset" style="display: none;"> | Current filter: <span class="filter"></span></span>
+
+						<div class="clearfix"></div>
+					</div>
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+			  
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+				  <div class="chart-title" >
+					Nascimentos por região
+				  </div>
+				  <div class="chart-stage" id="chart-stage03">
+					<div id="chart-03">
+					
+					</div>
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+
+			  
+			</div>  
+			
+			<div class="row">
+
+			  
+
+			  <div class="col-sm-6">
+				<div class="chart-wrapper">
+				  <div class="chart-title">
+					Nascimentos por tipo de parto
+				  </div>
+				  <div class="chart-stage" id="chart-stage04">
+					<div id="chart-04"></div>
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+			  
+			  			  <div class="col-sm-6">
+				<div class="chart-wrapper">
+				  <div class="chart-title">
+					Estatistica 4
+				  </div>
+				  <div class="chart-stage" id="bigchart-05">
+		
+		 <!-- <center> -->
+        <!-- <div class="col-md-6 col-md-offset-1"> -->
+		
+				        <table class='table table-hover' id='chart-05' class="list table table-striped table-bordered">
+							 
+								<thead>
+									<tr class='header' center style="background-color: Cornsilk ;">
+										<th> Ano</th>
+										<th> Municipio</th>
+										<th> Vaginal</th>
+										<th> Cesario</th>
+										<th> Ignorado</th>
+										<th> Total </th>
+									 </tr>
+								</thead>
+							</table>				  
+
+
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+			  <div class="row">
+
+			  </div>
+
+			</div><!--row end-->
+
+			
+			<div class="row">
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+				  <div class="chart-title">
+					Cor/Raça
+				  </div>
+				  <div class="chart-stage" id ="char-relatstage">
+				    <div class="row">
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart02">Preta</h1>
+							<div id="pretaChart"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart02" >Parda</h1>
+							<div id="pardaChart"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart02">Branca</h1>
+							<div id="brancaChart"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart02">Amarela</h1>
+							<div id="amarelaChart"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart02">Indigena</h1>
+							<div id="indigenaChart"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart02">Indeterm.</h1>
+							<div id="indetermChart"></div>
+						</div>
+					</div>
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-6">
+				<div class="chart-wrapper">
+				  <div class="chart-title">
+					Peso ao nascer
+				  </div>
+				  <div class="chart-stage" id ="char-relatstage2">
+
+				    <div class="row">
+						<div class="col-sm-3" style='padding-left: 20px;'>
+							<h1 id="labelchart03">Menos de 500g</h1>
+							<div id="chart15"></div>
+						</div>
+						<div class="col-sm-3" style='padding-left: 20px;'>
+							<h1 id="labelchart03" >500 a 999g</h1>
+							<div id="chart16"></div>
+						</div>
+						<div class="col-sm-3" style='padding-left: 20px;'>
+							<h1 id="labelchart03">1000 a 1499g</h1>
+							<div id="chart17"></div>
+						</div>
+						<div class="col-sm-3" style='padding-left: 20px;'>
+							<h1 id="labelchart03">1500 a 2499g</h1>
+							<div id="chart18"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart03">2500 a 2999g</h1>
+							<div id="chart19"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart03">3000 a 3999g</h1>
+							<div id="chart20"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart03">4000g e mais</h1>
+							<div id="chart21"></div>
+						</div>
+					</div>
+				  
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+	
+
+			  <div class="col-sm-3">
+				<div class="chart-wrapper">
+				  <div class="chart-title">
+					Pre-natal ( nº de consultas)
+				  </div>
+				  <div class="chart-stage" id ="char-relatstage3">
+					 <div class="row">
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart04">Nenhuma</h1>
+							<div id="chart22"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart04" >1 a 3</h1>
+							<div id="chart23"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart04">4 a 6</h1>
+							<div id="chart24"></div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart04">7 ou mais</h1>
+							<div id="chart25"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart04">não_informado</h1>
+							<div id="chart26"></div>
+						</div>
+						<div class="col-sm-4" style='padding-left: 20px;'>
+							<h1 id="labelchart04">         </h1>
+							<div id="ch"></div>
+						</div>
+					</div>
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>
+			  
+
+			</div>
+			
+			<div class="row">
+			  <div class="col-sm-12">
+				<div class="title_sec" style="background-color:#899296;  margin-bottom: 20px;">
+					<h1 style="padding-top: 10px;">Indicadores Sociais</h1>
+					<h2 style="color: white;">assuntos correlatos</h2>
+				</div>
+			  </div>
+			</div>				
+			<div class="row">
+			  <div class="col-sm-12">
+				<div class="chart-wrapper">
+				  <div class="chart-title" id="correlatos">
+					Estatistica 4
+				  </div>
+				  <div class="chart-stage" id ="char-relatstage4">
+					<div id="chart-relat"></div>
+				  </div>
+				  <div class="chart-notes">
+					fonte: SINASC - Sistema de Informações sobre nascidos vivos (Min. da Saúde) .
+				  </div>
+				</div>
+			  </div>		  
+
+			</div>
+			
+			
+			<div class="row">
+			  <div class="col-sm-12">
+				<div class="title_sec" style="background-color:#899296;  margin-bottom: 20px;">
+					<h1 style="padding-top: 10px;">Mundo</h1>
+					<h2 style="color: white;">comparativo com outros paises</h2>
+				</div>
+			  </div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="chart-wrapper">
+					  <div class="chart-title" id="comparativotitle">
+						Estatistica 4
+					  </div>
+					  <div class="chart-stage">
+						  <div id="chartmundo"></div>
+							  <footer>
+								<h1>Taxa bruta de natalidade - Brasil/BRICS/America do Sul (<span class="year">2004</span>)</h1>
+								<p class="hint"><em>Use as setas do teclado para navegar <a id="autoplay" href="#">Clique aqui para ver animação</a>.</em></p>
+							  </footer>
+					  </div>
+					  <div class="chart-notes">
+							<p>Dados extraidos do<a href="http://data.worldbank.org/indicator/SP.DYN.LE00.IN">Banco Mundial</a>.</p>
+					  </div>
+					
+				  </div>
+			  </div>
+			</div>
+
+	  
+		</div>		
+
+		
+		
+		<div class="col-sm-2">
+
+				<div class="sidebar">						
+	
+					<div class="widget">
+						<h2>Saude Publica</h2>
+						<div class="title_br"></div>
+						<ul>
+							<li><a href="">Morbidade Hospitalar</a></li>
+							<li><a href="">Rede Assistencial</a></li>
+							<li><a href="">Doencas Transmissiveis</a></li>
+							<li><a href="">Doencas Imunopreviniveis</a></li>
+							<li><a href="">Doencas Emergentes</a></li>
+							<li><a href="">Doencas Negligenciadas</a></li>
+							<li><a href="">Doencas Relacionadas ao Saneamento inadequado</a></li>
+							<li><a href="">Doencas Cronicas</a></li>
+							<li><a href="">Acidentes e Violencia</a></li>
+						</ul>
+					</div>					
+					<div class="widget">
+						<h2>palavras-chaves</h2>
+						<div class="title_br"></div>
+						<ul class="tag">
+							<li><a href="">aids</a></li>
+							<li><a href="">dengue</a></li>
+							<li><a href="">drogas</a></li>
+							<li><a href="">cancer</a></li>
+							<li><a href="">html</a></li>
+							<li><a href="">zika</a></li>
+
+						</ul>
+					</div>						
+				</div>
+		
+		
+		</div>
+    </div>
+
+    <hr>
+
+    <p class="small text-muted">Extraido e elaborado por <a href="https://foo-embrasilia.rhcloud.com">AVEC ciencia de dados</a></p>
+
+  </div>
+  
+    <script type="text/javascript"src="{% static 'js/dashboards/nascidosvivos.js' %}"></script>
+  
+
+  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+  <script type="text/javascript" src="{% static 'js/holder.js' %}"></script>
+  <script>
+    Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
+  </script>
+
+  <script type="text/javascript" src="{% static 'js/keen.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/meta.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/mapa.js' %}"></script>  
+  </body>
+</html>
+{% endblock %}

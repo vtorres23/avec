@@ -1,0 +1,365 @@
+{
+ "name": "Brasil",
+ "children": [
+  {
+   "name": "Norte",
+   "children": [
+    {
+     "name": "Amazonas",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 54},
+      {"name": "desenhos_industriais", "value": 11},
+      {"name": "indicacoes_geograficas", "value": 1},
+      {"name": "marcas", "value": 657},
+	  {"name": "patentes", "value": 30},
+      {"name": "programas_de_computador", "value": 18},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Roraima",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 0},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 83},
+	  {"name": "patentes", "value": 0},
+      {"name": "programas_de_computador", "value": 0},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Amapa",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 0},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 84},
+	  {"name": "patentes", "value": 2},
+      {"name": "programas_de_computador", "value": 2},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Para",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 1},
+      {"name": "desenhos_industriais", "value": 19},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 689},
+	  {"name": "patentes", "value": 42},
+      {"name": "programas_de_computador", "value": 14},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Tocantins",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 2},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 244},
+	  {"name": "patentes", "value": 13},
+      {"name": "programas_de_computador", "value": 4},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },	
+		{
+     "name": "Rondonia",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 2},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 314},
+	  {"name": "patentes", "value": 28},
+      {"name": "programas_de_computador", "value": 1},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+    {
+     "name": "Acre",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 0},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 86},
+	  {"name": "patentes", "value": 3},
+      {"name": "programas_de_computador", "value": 0},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    }
+   ]
+  },
+   {
+   "name": "Nordeste",
+   "children": [
+    {
+     "name": "Maranhao",
+     "children": [ 
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 2},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 502},
+	  {"name": "patentes", "value": 57},
+      {"name": "programas_de_computador", "value": 21},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Piaui",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 1},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 336},
+	  {"name": "patentes", "value": 25},
+      {"name": "programas_de_computador", "value": 12},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Ceara",
+     "children": [ 
+      {"name": "contratos_de_tecnologia", "value": 1},
+      {"name": "desenhos_industriais", "value": 198},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 2992},
+	  {"name": "patentes", "value": 134},
+      {"name": "programas_de_computador", "value": 25},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Rio Grande do Norte",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 1},
+      {"name": "desenhos_industriais", "value": 0},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 890},
+	  {"name": "patentes", "value": 55},
+      {"name": "programas_de_computador", "value": 22},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Pernambuco",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 5},
+      {"name": "desenhos_industriais", "value": 15},
+      {"name": "indicacoes_geograficas", "value": 1},
+      {"name": "marcas", "value": 2826},
+	  {"name": "patentes", "value": 170},
+      {"name": "programas_de_computador", "value": 56},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },	
+		{
+     "name": "Paraiba",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 11},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 929},
+	  {"name": "patentes", "value": 74},
+      {"name": "programas_de_computador", "value": 12},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+		{
+     "name": "Sergipe",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 4},
+      {"name": "desenhos_industriais", "value": 7},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 322},
+	  {"name": "patentes", "value": 28},
+      {"name": "programas_de_computador", "value": 16},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },	
+		{
+     "name": "Alagoas",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 3},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 632},
+	  {"name": "patentes", "value": 40},
+      {"name": "programas_de_computador", "value": 9},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+    {
+     "name": "Bahia",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 18},
+      {"name": "desenhos_industriais", "value": 33},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 3606},
+	  {"name": "patentes", "value": 152},
+      {"name": "programas_de_computador", "value": 36},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    }
+   ]
+  }
+  ,
+   {
+   "name": "Centro-Oeste",
+   "children": [
+{
+     "name": "Mato Grosso",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 3},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 1543},
+	  {"name": "patentes", "value": 47},
+      {"name": "programas_de_computador", "value": 11},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },	
+		{
+     "name": "Mato Grosso do Sul",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 0},
+      {"name": "desenhos_industriais", "value": 9},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 1249},
+	  {"name": "patentes", "value": 51},
+      {"name": "programas_de_computador", "value": 15},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+	{
+     "name": "Goias",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 7},
+      {"name": "desenhos_industriais", "value": 20},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 3867},
+	  {"name": "patentes", "value": 130},
+      {"name": "programas_de_computador", "value": 23},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+     ]
+    },
+    {
+     "name": "Distrito Federal",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 8},
+      {"name": "desenhos_industriais", "value": 19},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 3138},
+	  {"name": "patentes", "value": 122},
+      {"name": "programas_de_computador", "value": 76},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+
+     ]
+    }
+   ]
+  }
+  ,
+   {
+   "name": "Sudeste",
+   "children": [
+{
+     "name": "Sao Paulo",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 397},
+      {"name": "desenhos_industriais", "value": 1291},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 2000},
+	  {"name": "patentes", "value": 2431},
+      {"name": "programas_de_computador", "value": 604},
+      {"name": "topografias_de_circuitos_integrados", "value": 1}
+
+     ]
+    },	
+		{
+     "name": "Rio de Janeiro",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 120},
+      {"name": "desenhos_industriais", "value": 117},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 13056},
+	  {"name": "patentes", "value": 807},
+      {"name": "programas_de_computador", "value": 169},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+
+     ]
+    },
+	{
+     "name": "Espirito Santo",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 6},
+      {"name": "desenhos_industriais", "value": 25},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 2073},
+	  {"name": "patentes", "value": 178},
+      {"name": "programas_de_computador", "value": 20},
+      {"name": "topografias_de_circuitos_integrados", "value": 1}
+
+     ]
+    },
+    {
+     "name": "Minas Gerais",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 75},
+      {"name": "desenhos_industriais", "value": 277},
+      {"name": "indicacoes_geograficas", "value": 1},
+      {"name": "marcas", "value": 11786},
+	  {"name": "patentes", "value": 711},
+      {"name": "programas_de_computador", "value": 180},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+
+     ]
+    }
+   ]
+  }
+  ,
+   {
+   "name": "Sul",
+   "children": [
+		{
+     "name": "Parana",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 28},
+      {"name": "desenhos_industriais", "value": 340},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 10751},
+	  {"name": "patentes", "value": 670},
+      {"name": "programas_de_computador", "value": 92},
+      {"name": "topografias_de_circuitos_integrados", "value": 2}
+
+     ]
+    },
+	{
+     "name": "Rio Grande do Sul",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 31},
+      {"name": "desenhos_industriais", "value": 382},
+      {"name": "indicacoes_geograficas", "value": 0},
+      {"name": "marcas", "value": 7883},
+	  {"name": "patentes", "value": 753},
+      {"name": "programas_de_computador", "value": 100},
+      {"name": "topografias_de_circuitos_integrados", "value": 5}
+
+     ]
+    },
+    {
+     "name": "Santa Catarina",
+     "children": [
+      {"name": "contratos_de_tecnologia", "value": 18},
+      {"name": "desenhos_industriais", "value": 348},
+      {"name": "indicacoes_geograficas", "value": 1},
+      {"name": "marcas", "value": 7557},
+	  {"name": "patentes", "value": 528},
+      {"name": "programas_de_computador", "value": 72},
+      {"name": "topografias_de_circuitos_integrados", "value": 0}
+
+     ]
+    }
+   ]
+  }
+ ]
+}

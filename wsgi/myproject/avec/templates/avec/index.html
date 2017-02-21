@@ -1,0 +1,838 @@
+{% load staticfiles %}
+{% static 'css/main.css' %}
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>AVEC - Ciencia de dados</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<!--[if lt IE 9]> <script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script> <![endif]-->
+        <!-- Place favicon.ico in the root directory -->
+		<link rel="icon" type="image/png" href="search.png">
+
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+<style>
+	li a, .dropbtn {
+    display: inline-block;
+    color: #666666;
+    text-align: center;
+    padding: 14px 16px;s
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+	</style>
+    </head>
+<body >
+		 <!-- start preloader  -->
+        <div id="loader-wrapper">
+            <div class="logo"></div>
+            <div id="loader">
+            </div>
+        </div>
+        <!--s end preloader -->
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+<!-- Start Header Section -->
+<header class="main_menu_sec navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-12">
+				<div class="lft_hd">
+					<a href="{% url 'index' %}"><img src="{% static 'img/Flat_logo_on_transparent_249_69.png' %}" alt=""/></a>
+				</div>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-12">
+				<div class="rgt_hd">
+					<div class="main_menu">
+						<nav id="nav_menu">
+							<button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							</button>
+						<div id="navbar">
+							<ul>
+								<li><a class="page-scroll" href="{% url 'index' %}">Home</a></li>
+							<ul>
+							</ul>
+							</li>
+								<li><a class="page-scroll" href="#abt_sec">a AVEC</a></li>
+								<li><a class="page-scroll" href="#pr_sec">Nossas Soluções</a></li>
+								<li><a class="page-scroll" href="#protfolio_sec">Portfolio</a></li>
+								<li><a class="page-scroll" href="#skill_sec">Infograficos</a></li>
+								<li><a class="page-scroll" href="#tm_sec">Equipe</a></li>
+								<li><a class="page-scroll" href="#pricing_sec">Precos</a></li>
+								<li><a class="page-scroll" href="#ctn_sec">Informe-se</a></li>
+							</ul>
+						</div>
+						</nav>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+		{% if user.is_authenticated %}
+			  <li class="dropdown" style="float:right;  padding-right: 20px;">
+				<a href="javascript:void(0)" class="dropbtn">Usuario: {{ user }}</a>
+				<div class="dropdown-content">
+				  <a href="{% url 'logout' %}">Logout</a>
+				  <a href="#">Meus dados</a>
+				  <a href="#">Alterar senha</a>
+				</div>
+			  </li>
+		{% else %}
+				<p style="float:right; padding-right: 20px;"> <a style="color: white;" href="{% url 'accounts:register' %}">Registre-se</a></p>
+				<p style="float:right; padding-right: 20px;"> <a style="color: white;" href="/login">Login</a></p>
+		{% endif%}
+</header>
+<!-- End Header Section -->
+
+<!-- start slider Section -->
+<section id="slider_sec">
+	<div class="container">
+		<div class="row">
+			<div class="slider">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>Seja um expert</h1>
+							<p>ACESSE DADOS COMPLETOS E ATUALIZADOS</p>
+						  </div>
+						</div>
+					</div>
+					<div class="item">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>Acesse somente o que você precisa</h1>
+							<p>INDICADORES TRATADOS E AGRUPADOS POR DOMINIO</p>
+						  </div>
+						</div>
+					</div>
+					<div class="item ">
+						<div class="wrap_caption">
+						  <div class="caption_carousel">
+							<h1>Retratos Setoriais</h1>
+							<p>TENHA UMA ANALISE COMPLETA SOBRE UMA DETERMINADA AREA</p>
+						  </div>
+						</div>
+					</div>
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left left_crousel_btn" href="#carousel-example-generic" role="button" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+					<span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right right_crousel_btn" href="#carousel-example-generic" role="button" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+					<span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End slider Section -->
+
+<!-- start about Section -->
+<section id="abt_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Sobre nós</h1>
+					<h2>Equipe de Ciência de Dados</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="abt">
+					<p>Agregando conhecimento e tecnologia de ponta, levamos a um novo conceito a criação de
+					valores a partir de dados, disponibilizando indicadores, estatisticas e previsões baseadas em informações ativas e descobertas continuas.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End About Section -->
+
+<!-- start Counting section-->
+<section id="counting_sec">
+<div class="container">
+	<div class="row">
+
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-desktop"></i>
+			<h2 class="counter">120</h2>
+			<h4>Bases de dados Integradas</h4>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-desktop"></i>
+			<h2 class="counter">300</h2>
+			<h4>Indicadores</h4>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-user"></i>
+			<h2 class="counter">30</h2>
+			<h4>anos de experiência com dados sociais</h4>
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+			<div class="counting_sl">
+			<i class="fa fa-clock-o"></i>
+			<h2 class="counter">4,427</h2>
+			<h4>Horas de analise</h4>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- start Service Section -->
+<section id="pr_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Nossas Soluções</h1>
+					<h2>Equipe de Ciência de Dados</h2>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">
+					<i class="fa fa-pie-chart"></i>
+					<h2>Indicadores,  séries históricas e correlações</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-pie-chart"></i>
+						<h2>Indicadores,  séries históricas e correlações</h2>
+						<p>Informações disponibilizadas em formatos que permitem sua facil leitura e interpretação, agrupadas por temas e relacionadas com suas causas determinantes.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">
+					<i class="fa fa-camera-retro"></i>
+					<h2>Retratos</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-camera-retro"></i>
+						<h2>Retratos</h2>
+						<p>Visão pontual sobre temas especificos, localizados em espaços temporais e geograficos.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">
+					<i class="fa fa-search-plus"></i>
+					<h2>Analises e Descobertas</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-search-plus"></i>
+						<h2>Analises e Descobertas</h2>
+						<p>Analises aprofundadas sobre setores ou temas, buscando correlações e tendências entre variaveis pre-definidas.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+				<div class="service">
+					<i class="fa fa-link"></i>
+					<h2>Integração de bases de dados</h2>
+					<div class="service_hoverly">
+						<i class="fa fa-link"></i>
+						<h2>Integração de bases de dados</h2>
+						<p>Integração do conteúdo de nosso lago de dados com bases proprietarias, buscando uma visão comparativa e qualitativa sobre temas e assuntos programados.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Service Section -->
+
+<!-- start portfolio Section -->
+<section id="protfolio_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Nosso Portfolio</h1>
+					<h2>Equipe de Ciência de Dados</h2>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="portfolio-filter text-uppercase text-center">
+				<ul class="filter">
+					<li class="active" data-filter="*">Todos</li>
+					{% block content2 %}
+						{% for th in themes %}
+							<li data-filter=".{{th.title|cut:" "}}">{{th.title}}</li>
+						{% endfor %}
+					{% endblock content2 %}
+							<li data-filter=".retratosmunicipais">Retratos Municipais</li>
+				</ul>
+				</div>
+
+				<div class="all-portfolios">
+				{% block content %}
+					{% for subj in subject %}
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+						<div class="single-portfolio {{ subj.theme|cut:" " }}">
+							<a href="{% url 'subject_detail' pk=subj.pk %}">
+								<img class="img-responsive" src="{% static 'img/fs-hospital.png' %}" >
+								<h2>{{ subj.title }}</h2>
+							</a>
+						</div>
+					</div>
+					{% endfor %}
+				{% endblock content %}
+					<div class="col-sm-12  col-lg-12 col-md-12 col-xs-12 ">
+						<div class="single-portfolio retratosmunicipais">
+							<a href="{% url 'retratos_municipais' %}">
+								<img class="img-responsive" src="{% static 'img/fs-hospital.png' %}" >
+								<h2>Retratos Municipais</h2>
+							</a>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+				<div class="post_btn">
+					<div class="hover_effect_btn" id="hover_effect_btn">
+						<a href="#hover_effect_btn" data-hover="view more post"><span>ver mais</span></a>
+					</div>-
+				</div>
+			</div>
+		</div>
+</section>
+<!-- End Portfolio Section -->
+
+<!-- start progress bar Section -->
+<section id="skill_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Infograficos sobre os temas mais comentados</h1>
+					<!--<h2>WE’RE BRANDING & DIGITAL STUDIO FROM VIET NAM</h2>-->
+				</div>
+			</div>
+
+
+				<div id="myCarousel" class="carousel slide" data-ride="carousel" >
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner">
+					<div class="item active">
+					  <img src="{% static 'img/infograficos/alunosDoutorado.jpg' %}" alt="..." width="35%" height="auto"  style="display: block; margin: auto;">
+					  <div class="carousel-caption">
+						<h3>Alunos de Doutorado</h3>
+					  </div>
+					</div>
+					<div class="item">
+					  <img src="{% static 'img/infograficos/indiceGlobalInovaçãoBrasilFranca.jpg' %}" alt="..." width="35%" height="auto" style="display: block; margin: auto;">
+					  <div class="carousel-caption">
+						<h3>Indice Global de Inovação</h3>
+						<h1>Brasil - França</h1>
+					  </div>
+					</div>
+					<div class="item">
+					  <img src="{% static 'img/infograficos/pesquisadoresCNPQ.jpg' %}" alt="..." width="35%" height="auto" style="display: block; margin: auto;">
+					  <div class="carousel-caption">
+						<h3>Pesquisadores CNPQ</h3>
+					  </div>
+					</div>
+				  </div>
+
+				  <!-- Controls -->
+					  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					  </a>
+				</div> <!-- Carousel -->
+
+		</div>
+	</div>
+</section>
+<!-- End progress bar Section -->
+
+<!-- start our team Section -->
+<section id="tm_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Equipe</h1>
+					<h2>EQUIPE MULDISCIPLINAR, FORMADA POR PROFISSIONAIS ATUANTES NO MERCADO HA MAIS DE 20 ANOS NA DINÂMICA DE TRATAMENTO, INTEGRAÇÃO E INTELIGÊNCIA DE DADOS, PROFISSIONAIS DE TI ALINHADOS COM AS TECNOLOGIAS EMERGENTES DO MERCADO E COM EXPERIÊNCIA NO SETOR DE CONSULTORIA DE NEGÓCIOS, TRABALHANDO INCANSAVELMENTE NA CRIAÇÃO DE VALORES E DESCOBERTAS BASEADAS EM DADOS DINÂMICOS.</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+				<div class="all_team">
+					<div class="sngl_team">
+						<img src="https://static.wixstatic.com/media/c3ed71_c0c71fd2a21d4763837a8926c5d0130b~mv2.png/v1/fill/w_95,h_126,al_c,q_80,usm_0.66_1.00_0.01/c3ed71_c0c71fd2a21d4763837a8926c5d0130b~mv2.webp" alt=""/>
+						<h3> Emanuel Porangaba <span> - Conteúdo</span></h3>
+
+					</div>
+					<div class="sngl_team">
+						<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAmKAAAAJDhjMjdmYTc2LTBmZjctNGJmMi1iYTVmLTQ5ZDc5ZWFhODU0YQ.jpg" alt=""/>
+						<h3>Vinicius Torres <span> - Tecnologia </span></h3>
+
+					</div>
+					<div class="sngl_team">
+						<img src="https://static.wixstatic.com/media/c3ed71_f38c25a7ed6c430a972fef98a2408c17~mv2.jpg/v1/fill/w_92,h_91,al_c,q_80,usm_0.66_1.00_0.01/c3ed71_f38c25a7ed6c430a972fef98a2408c17~mv2.webp" alt=""/>
+						<h3> Daniel Porangaba <span> - Pesquisa   </span></h3>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End our team Section -->
+
+<!-- start our teastimonial Section
+<section id="tstm_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="all_tstm">
+
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>what people say?</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- jhon deo</h6>
+					</div>
+				</div>
+
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Clien Design</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- shura deo</h6>
+					</div>
+				</div>
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Awesome Support SIMA</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- kumara deo</h6>
+					</div>
+				</div>
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Theme Feature great</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- dhera deo</h6>
+					</div>
+				</div>
+				<div class="clnt_tstm">
+					<div class="sngl_tstm">
+						<i class="fa fa-quote-right"></i>
+						<h3>Non conflict</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sequi accusamus voluptatum rem itaque alias deleniti nostrum aperiam fugiat voluptates debitis praesentium incidunt accusantium distinctio,</p>
+						<h6>- jhon deo</h6>
+					</div>
+				</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+End our teastimonial Section -->
+
+
+<!-- start Latest post Section
+<section id="lts_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Our Latest Blog</h1>
+					<h2>WE’RE BRANDING & DIGITAL STUDIO FROM VIET NAM</h2>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">
+					<img src="http://cdn.shopify.com/s/files/1/1039/5466/files/blog-img2.jpg?10828543012475550494" alt=""/>
+					<h2>How to fix your bug</h2>
+					<p>Nullam metus arcu, pharetra eu tempor vel, consectetur nec metus. Praesent malesuada, purus et euismod rutrum, augue nisi facilisis diam, vitae auctor nisl libero nec eros. Vivamus vitae pulvinar augue. Nulla facilisi. Quisque rutrum ante interdum</p>
+					<a href="single.html">Read more <i class="fa fa-long-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">
+					<img src="http://cdn.shopify.com/s/files/1/1039/5466/files/blog-img3.jpg?16122351990094232768" alt=""/>
+					<h2>Pellentesque nibh libero</h2>
+					<p>Nullam metus arcu, pharetra eu tempor vel, consectetur nec metus. Praesent malesuada, purus et euismod rutrum, augue nisi facilisis diam, vitae auctor nisl libero nec eros. Vivamus vitae pulvinar augue. Nulla facilisi. Quisque rutrum ante interdum</p>
+					<a href="">Read more <i class="fa fa-long-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="lts_pst">
+					<img src="http://cdn.shopify.com/s/files/1/1039/5466/files/blog-img1.jpg?1960436319992241823" alt=""/>
+					<h2>pharetra eu tempor vel</h2>
+					<p>Nullam metus arcu, pharetra eu tempor vel, consectetur nec metus. Praesent malesuada, purus et euismod rutrum, augue nisi facilisis diam, vitae auctor nisl libero nec eros. Vivamus vitae pulvinar augue. Nulla facilisi. Quisque rutrum ante interdum</p>
+					<a href="">Read more <i class="fa fa-long-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="post_btn">
+				<div class="hover_effect_btn" id="hover_effect_btn">
+					<a href="#hover_effect_btn" data-hover="view more post"><span>view more post</span></a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+ End Latest post Section-->
+
+<!-- start pricing Section -->
+<section id="pricing_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Nossa politica de preços</h1>
+					<h2>Equipe de Ciência de Dados</h2>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="sngl_pricing">
+					<h2 class="title_bg_1">Gratuito</h2>
+					<h3><span class="currency">R$</span>-<span class="monuth">/  mês</span></h3>
+					<ul>
+						<li>Indicadores basicos</li>
+						<li>Correlações limitadas</li>
+						<li>Download de PNG e JPEG</li>
+						<li>Acesso por 15 dias</li>
+						<li><a href="" class="btn pricing_btn">Cadastre-se</a></li>
+
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="sngl_pricing">
+					<h2 class="title_bg_2">Basico</h2>
+					<h3><span class="currency">R$</span>-<span class="monuth">/  mês</span></h3>
+					<ul>
+						<li>Todos os itens do gratuito</li>
+						<li>Correlações de dados</li>
+						<li>Download de PDF e JSON</li>
+						<li>Acesso a retratos e infograficos</li>
+						<li><a href="" class="btn pricing_btn">Assine!</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="sngl_pricing">
+					<h2 class="title_bg_3">Completo</h2>
+					<h3><span class="currency">R$</span>-<span class="monuth">/  mês</span></h3>
+					<ul>
+						<li>Todos os itens do basico</li>
+						<li>Previsões e Insights</li>
+						<li>Alerta de publicação</li>
+						<li>Download dos dados</li>
+						<li><a href="" class="btn pricing_btn">Assine!</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End pricing Section -->
+
+
+<!-- start Happy Client Section
+<section id="clt_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>Our Happy Clients</h1>
+					<h2>WE’RE BRANDING & DIGITAL STUDIO FROM VIET NAM</h2>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12">
+				<div class="al_clt">
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_03.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_03.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_04.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_05.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_01.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_03.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_04.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_05.png" alt=""/></a>
+					</div>
+					<div class="sngl_clt">
+						<a href=""><img src="http://showwp.com/demos/porton/default/upload/client_01.png" alt=""/></a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Happy Client  Section -->
+
+<!-- start contact us Section -->
+<section id="ctn_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs12 ">
+				<div class="title_sec">
+					<h1>~Informações de Contato</h1>
+					<h2>Equipe de Ciência de Dados</h2>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div id="cnt_form">
+					<form id="contact-form" class="contact" name="contact-form" method="post" action="send-mail.php">
+						<div class="form-group">
+						<input type="text" name="name" class="form-control name-field" required="required" placeholder="Nome">
+						</div>
+						<div class="form-group">
+							<input type="email" name="email" class="form-control mail-field" required="required" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Mensagem"></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary">Enviar</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6">
+				<div class="cnt_info">
+					<ul>
+						<li><i class="fa fa-facebook"></i><p>SCS Q 06, Bl A, sala 403, Edificio Carioca. Asa Sul, Brasilia - Brasil</p></li>
+						<li><i class="fa fa-envelope"></i><p>contatoavecdata@gmail.com</p></li>
+						<li><i class="fa fa-phone"></i><p>+55 61 99112-4562</p></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End contact us  Section -->
+
+<!-- start located map Section -->
+<section id="ltd_map_sec">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="map">
+			<h1>Localização</h1><a href="#slidingDiv" class="show_hide" rel="#slidingDiv"><i class="fa fa-angle-up"></i></a>
+			<div id="slidingDiv">
+				<div class="map_area">
+					<div id="googleMap" style="width:100%;height:300px;"></div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- End located map  Section -->
+<!-- start footer Section -->
+<footer id="ft_sec">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="ft">
+					<ul>
+						<li><a href=""><i class="fa fa-facebook"></i></a></li>
+						<li><a href=""><i class="fa fa-twitter"></i></a></li>
+						<li><a href=""><i class="fa fa-linkedin"></i></a></li>
+
+					</ul>
+				</div>
+				<ul class="copy_right">
+					<li>&copy; AVEC - Ciencia de Dados 2017</li>
+					<!--<li>developer by md. shiddikur rahman</li>-->
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- End footer Section -->
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="{% static 'js/vendor/jquery-1.11.3.min.js' %}"></script>
+
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!--<script src="js/jquery-min.js"></script>-->
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/showHide.js' %}"></script>
+<script src="{% static 'js/jquery.nicescroll.min.js' %}"></script>
+<script src="{% static 'js/jquery.easing.min.js' %}"></script>
+<script src="{% static 'js/scrolling-nav.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<!-- Google Map js -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0FQ0GoPiAopELwojuTktRI6sMqklMyQ4"></script>
+		<script>
+			function initialize() {
+			  var mapOptions = {
+				zoom: 14,
+				scrollwheel: false,
+				center: new google.maps.LatLng(-15.778282, -47.889082)
+			  };
+			  var map = new google.maps.Map(document.getElementById('googleMap'),
+				  mapOptions);
+			  var marker = new google.maps.Marker({
+				position: map.getCenter(),
+				animation:google.maps.Animation.BOUNCE,
+				icon: 'img/map-marker.png',
+				map: map
+			  });
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+   $('.show_hide').showHide({
+		speed: 1000,  // speed you want the toggle to happen
+		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+		changeText: 1, // if you dont want the button text to change, set this to 0
+		showText: 'View',// the button text to show when a div is closed
+		hideText: 'Close' // the button text to show when a div is open
+
+	});
+
+
+});
+
+</script>
+<script>
+    jQuery(document).ready(function( $ ) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    });
+</script>
+
+<script>
+
+  //Hide Overflow of Body on DOM Ready //
+$(document).ready(function(){
+    $("body").css("overflow", "hidden");
+});
+
+// Show Overflow of Body when Everything has Loaded
+$(window).load(function(){
+    $("body").css("overflow", "visible");
+    var nice=$('html').niceScroll({
+	cursorborder:"5",
+	cursorcolor:"#00AFF0",
+	cursorwidth:"3px",
+	boxzoom:true,
+	autohidemode:true
+	});
+
+});
+</script>
+
+
+
+    </body>
+</html>

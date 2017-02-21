@@ -1,0 +1,180 @@
+{% extends 'avec/base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="row">
+			<div class="title_sec">
+				<h1>{{mysubject.title}}</h1>
+				<h2> estatísticas e informações sobre {{mysubject.title}} </h2>
+			</div>		
+			<div class="col-sm-8 ">
+			
+				<div class="sngl_blg">						
+					<!--<img src="http://cdn.shopify.com/s/files/1/1039/5466/files/blog-img2.jpg?10828543012475550494" alt=""/>-->
+					<div class="post_info">
+						<div class="post_intro">
+							<h2>{{mysubject.title}}</h2>
+							<i class="fa fa-heartbeat"></i>									
+						</div>
+					</div>
+					<div class="post_content">
+						<p align=justify>{{mysubject.text|linebreaks}}
+						</p>
+					</div>
+				</div>
+				
+				<div class="author_info">				
+				<div class="row" >
+					<div class="col-sm-12">
+						Dashboards recentes						
+					</div>
+				</div>
+				{% if mysubject.pk == 4 %}
+				  <div class="row" style="padding-top: 20px">
+					<div class="col-sm-2">
+					<a href="{% url 'nascidosvivos' %}"><img src="{% static 'img/flattyShadow_red/fs-line.png' %}" alt="" style="width:60%"/></a>
+					</div>
+					<div class="col-sm-10">
+					<div class="author_dec">
+							<a href="{% url 'nascidosvivos' %}">Nascidos Vivos</a>						
+							<p>dashboard com com informações sobre nascimentos no Brasil.</p>								
+					</div>
+				   </div>
+				  </div>
+				  {% elif mysubject.pk == 64 %}	
+				  <div class="row" style="padding-top: 20px">
+					<div class="col-sm-2">
+					<a href="{% url 'inovacao' %}"><img src="{% static 'img/flattyShadow_red/fs-line.png' %}" alt="" style="width:60%"/></a>
+					</div>
+					<div class="col-sm-10">
+					<div class="author_dec">
+							<a href="{% url 'inovacao' %}">Inovacao</a>						
+							<p>dashboard com com informações sobre inovacao no Brasil e no mundo.</p>								
+					</div>
+				   </div>
+				  </div>
+				  {% else %}	
+				  <div class="row" style="padding-top: 20px">
+					<div class="col-sm-2">
+					<!--<a href="{% url 'inovacao' %}"><img src="{% static 'img/fs-redline.png' %}" alt="" style="width:60%"/></a>-->
+					</div>
+					<div class="col-sm-10">
+					<div class="author_dec">
+							<p>No momento não há dashboard disponível para esse assunto.</p>						
+					</div>
+				   </div>
+				  </div>
+				  {% endif %}
+				</div>
+				<div class="author_info">
+					<div class="row">
+						<div class="col-sm-12">
+							Infograficos recentes						
+						</div>
+					</div>
+					{% if not posts %}
+						<div class="row" style="padding-top: 20px">
+						<div class="col-sm-2">
+						<!--<a href="{% url 'inovacao' %}"><img src="{% static 'img/fs-redline.png' %}" alt="" style="width:60%"/></a>-->
+						</div>
+						<div class="col-sm-10">
+						<div class="author_dec">
+							<p>No momento não há infografico disponível para esse assunto.</p>
+						</div>
+					   </div>
+					  </div>
+					{% else %}
+							{% for post in posts %}
+							<div class="row" style="padding-top: 20px">
+								<div class="col-sm-2">
+								<a href="{{post.link}}"><img src="{% static 'img/fs-line.png' %}" alt="" style="width:60%"/></a>
+								</div>
+								<div class="col-sm-10">
+								<div class="author_dec">
+									<a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a>
+									<a href="{{post.link}}"><p>{{ post.text|linebreaksbr }}</p></a>
+									<p>published: {{ post.published_date }}</p>
+								</div>
+							   </div>
+							</div>
+							{% endfor %}
+					{% endif %}		
+					
+				</div>				
+				<div class="author_info">
+					<div class="row">
+						<div class="col-sm-12">
+							Retratos recentes						
+						</div>
+					</div>
+					{% if not reports %}
+						<div class="row" style="padding-top: 20px">
+						<div class="col-sm-2">
+						<!--<a href="{% url 'inovacao' %}"><img src="{% static 'img/fs-redline.png' %}" alt="" style="width:60%"/></a>-->
+						</div>
+						<div class="col-sm-10">
+						<div class="author_dec">
+							<p>No momento não há retrato disponível para esse assunto.</p>
+						</div>
+					   </div>
+					  </div>
+					{% else %}
+							{% for report in reports %}
+							<div class="row" style="padding-top: 20px">
+								<div class="col-sm-2">
+								<a href=""><img src="{% static 'img/fs-line.png' %}" alt="" style="width:60%"/></a>
+								</div>
+								<div class="col-sm-10">
+								<div class="author_dec">
+									<a href="{% url 'reports_detail' pk=report.pk %}">{{ report.title }}</a>
+									<p>published: {{ report.published_date }}</p>
+								</div>
+							   </div>
+							</div>
+							{% endfor %}
+					{% endif %}		
+					
+				</div>				
+
+			</div>				
+			
+			<div class="col-sm-4">
+				<div class="sidebar">						
+					<div class="search_widget">
+						<input id="sr_bx" type="text" placeholder="Procure nessa categoria...."/>
+					</div>				
+					<div class="widget">
+						<h2>{{mysubject.title}}</h2>
+						<div class="title_br"></div>
+						<ul>
+							{% for sub in mysubdetail %}
+								<li><a href="{% url 'subsubject_detail'  pk=sub.pk %}">{{sub.title}}</a></li>
+							{% endfor %}	
+						</ul>
+					</div>					
+					<!--div class="widget">
+						<h2>Categorias relacionadas</h2>
+						<div class="title_br"></div>
+						<ul class="flickr">
+							<li><img src="{% static 'img/fs-graduation.png' %}" alt="" style='width: 50px; height: 50px;'/></li>
+							<li><img src="{% static 'img/fs-cab.png' %}" alt=""style='width: 50px; height: 50px;'/></li>
+							<li><img src="{% static 'img/fs-eyedropper_1.png' %}" alt=""style='width: 50px; height: 50px;'/></li>
+							<li><img src="{% static 'img/fs-recycle.png' %}" alt=""style='width: 50px; height: 50px;'/></li>
+							<li><img src="{% static 'img/fs-graduation.png' %}" alt=""style='width: 50px; height: 50px;'/></li>
+							<li><img src="{% static 'img/fs-cab.png' %}" alt=""style='width: 50px; height: 50px;'/></li>
+							<li><img src="{% static 'img/fs-eyedropper_1.png' %}" alt=""style='width: 50px; height: 50px;'/></li>
+							<li><img src="{% static 'img/fs-graduation.png' %}" alt=""style='width: 50px; height: 50px;'/></li>
+						</ul>
+					</div>-->
+					<div class="widget">
+						<h2>palavras-chaves</h2>
+						<div class="title_br"></div>
+						<ul class="tag">
+							{% for key in mykeywords %}
+								<li><a href="{% url 'keywords_detail' pk=key.pk %}">{{key.title}}</a></li>
+							{% endfor %}
+						</ul>
+					</div>						
+				</div>
+			</div>	
+		</div>
+{% endblock content %}

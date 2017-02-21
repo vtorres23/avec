@@ -28,7 +28,8 @@ SECRETS = secrets.getter(os.path.join(DATA_DIR, 'secrets.json'))
 SECRET_KEY = SECRETS['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == 'True'
+#DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG = True
 
 from socket import gethostname
 ALLOWED_HOSTS = [
@@ -48,6 +49,13 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'avec',
+	'accounts',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+	'widget_tweaks',
+	'django.contrib.sites',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,6 +70,9 @@ MIDDLEWARE_CLASSES = (
 
 # GETTING-STARTED: change 'myproject' to your project name:
 ROOT_URLCONF = 'myproject.urls'
+
+# Ensure the SITE_ID is defined
+SITE_ID = 1
 
 TEMPLATES = [
     {
@@ -96,9 +107,10 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -112,3 +124,17 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(WSGI_DIR, 'static')
+MEDIA_ROOT = os.path.join(STATIC_ROOT, 'img')
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL='/'
+AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.backends.ModelBackend',
+)
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
