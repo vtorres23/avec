@@ -63,7 +63,7 @@ gulp.task('css', function() { 
         .pipe(autoprefixer('last 2 versions', 'ie 9'))
         .pipe(minifyCSS({keepBreaks: false}))
         .pipe(sourcemaps.write('./stylesheets/maps'))
-         .pipe(gulp.dest('.//wsgi/myproject/avec/static/min/stylesheets')); 
+         .pipe(gulp.dest(config.jsPath + '/stylesheets')); 
 });
 
 // minifiy images
@@ -78,24 +78,22 @@ gulp.task('images', function () {
 
 // Watch files
 gulp.task('watch', function () {
-    gulp.watch(config.sassPath + '/**/*.scss', ['css']);
-    gulp.watch(['index.html', '**/*.html', config.assetPath + 'javascript/**/*', config.staticPath + 'img/*'], browserSync.reload);
+    gulp.watch([config.sassPath + '/**/*.scss', 'index.html', '**/*.html', config.assetPath + 'javascript/**/*', config.staticPath + 'img/*'], ['css', 'js', browserSync.reload] );
 });
 
 gulp.task('server', ['css', 'js'], function() {
   browserSync.init({
-    proxy: "localhost:8000/"
+    proxy: "localhost:8000"
   });
 
-    gulp.watch(['index.html', '**/*.html', config.assetPath + 'javascript/**/*', config.staticPath + 'img/*'], ['watch']);
+    gulp.watch(config.sassPath + '/**/*.scss', ['watch']);
+    gulp.watch('**/*.html').on('change', browserSync.reload);
 });
 
 gulp.task('browser-sync', function(){
   browserSync.init({
-    proxy: 'http://localhost:8000',
-    files: ['*.css,*.html,css/*css'],
-    port: 8000
+    proxy: "localhost:8000"
   });
 });
 
-  gulp.task('default', ['bower', 'fonts', 'css', 'js', 'watch', 'server']);
+  gulp.task('default', ['bower', 'fonts', 'css', 'js', 'server']);

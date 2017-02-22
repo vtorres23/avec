@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "make run -r &",
-    "start": "npm run server && gulp",
+    "start": "gulp",
     "postinstall": "./node_modules/bower/bin/bower install"
   },
   "devDependencies": {
