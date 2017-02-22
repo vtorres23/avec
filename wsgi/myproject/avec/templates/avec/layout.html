@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  	<title>AVEC - Ciencia de dados</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!--[if lt IE 9]> <script src="js/html5shiv.js"></script>
+  	<script src="js/respond.min.js"></script> <![endif]-->
+    <!-- Place favicon.ico in the root directory -->
+  	<link rel="icon" type="image/png" href="search.png">
+    <link rel="stylesheet" href="{% static 'min/stylesheets/style.css' %}">
+
+  </head>
+  <body >
+    <!-- Start Header Section -->
+    {% include "avec/_header.html" %}
+    <!-- End Header -->
+
+  	{% block content %}{% endblock %}
+
+    <script src="{% static 'min/javascript/app.js' %}"></script>
+
+  </body>
+</html>
