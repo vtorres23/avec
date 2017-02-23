@@ -1,6 +1,12 @@
 .header {
   min-height: 50px;
 
+  @include mobile(small) {
+    .container-fluid > .navbar-header {
+      margin: 0;
+    }
+  }
+
   &__navbar {
     background-color: $white;
     border-color: $white;
@@ -12,15 +18,30 @@
     float: left;
     height: 24px;
     width: 77px;
+
+    @include mobile(small) {
+      float: none;
+      height: auto;
+      width: auto;
+    }
   }
 
   &__menu {
     float: right;
+
+    @include mobile(small) {
+      float: none;
+      text-align: center;
+    }
   }
 
   &__nav {
     li {
       margin-left: 15px;
+
+      @include mobile(small) {
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -31,6 +52,24 @@
 
   .navbar-default .navbar-nav > li > a {
     color: $denim;
+  }
+
+
+  //Menu mobile
+  .navbar-default .navbar-toggle {
+    background-color: $white;
+    border-color: $topaz;
+
+    &:hover {
+      background-color: $topaz;
+      & .icon-bar {
+        background-color: $white;
+      }
+    }
+
+    & .icon-bar {
+      background-color: $topaz;
+    }
   }
 
 }
