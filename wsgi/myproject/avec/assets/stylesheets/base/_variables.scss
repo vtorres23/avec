@@ -1,0 +1,46 @@
+// *************************************
+//
+// base/variables
+//
+// *************************************
+
+// Typography
+$base-font-family: 'Open Sans', sans-serif;
+$heading-font-family: 'Playfair Display', serif;
+$serifa-font-family: 'Playfair Display', serif;
+$headings: 'h1, h2, h3, h4, h5, h6';
+
+// Font Sizes
+$base-font-size: 14px;
+$base-heading-font-size: 48px;
+$small-heading-font-size: 26px;
+
+// Line height
+$base-line-height: 1.2;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 8px;
+$base-spacing: $base-line-height * 1rem;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$white: #fff;
+$black: #000;
+$dark: #8291a9;
+$denim: #3e5881;
+$topaz: #1ad4b1;
+$dark2: #1e2938;
+
+// Font Colors
+$base-font-color: $dark;
+$action-color: $denim;
+
+//Background Color
+$base-background-color: $white;
+$secondary-background-color: $dark2;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
