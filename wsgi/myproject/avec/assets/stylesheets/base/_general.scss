@@ -7,6 +7,14 @@ body {
   line-height: $base-line-height;
   overflow-x: hidden;
 
+  .container {
+    max-width: 1024px !important;
+  }
+
+  .row {
+    margin: 0;
+  }
+
 }
 
 #{$headings} {
