@@ -1,0 +1,19 @@
+@mixin mobile($size) {
+  @if $size == mobile {
+    @media (max-width: 599px) { @content; }
+  } @else if $size == small {
+    @media (max-width: 768px) { @content; }
+  } @else if $size == tablet {
+    @media (max-width: 900px) { @content; }
+  } @else if $size == desktop {
+    @media (max-width: 1200px) { @content; }
+  } @else if $size == big {
+    @media (min-width: 1800px) { @content; }
+  }
+}
+
+@mixin media-resize($min, $max) {
+  @media (max-width: $max) and (min-width: $min) {
+    @content
+  }
+}
