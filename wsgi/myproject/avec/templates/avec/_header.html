@@ -1,9 +1,11 @@
 {% load staticfiles %}
 <header class="header">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a href="{% url 'index' %}"><img src="{% static 'img/Flat_logo_on_transparent_249_69.png' %}" alt=""/></a>
+  <nav class="header__navbar navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="header__brand navbar-header">
+        <a href="{% url 'index' %}"><img src="{% static 'img/logo-avec-dark@2x.png' %}"
+		 class="header__logo" /></a>
+
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -11,14 +13,14 @@
         </button>
       </div>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="header__menu nav navbar-nav">
-          <li><a class="header__menu__item" href="#abt_sec">Quem somos?</a></li>
-          <li><a class="header__menu__item" href="#pr_sec">Assuntos</a></li>
-          <li><a class="header__menu__item" href="#protfolio_sec">Soluções</a></li>
-          <li><a class="header__menu__item" href="#skill_sec">Planos</a></li>
+      <div class="header__menu collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="header__nav nav navbar-nav">
+          <li><a class="header__menu-item" href="#abt_sec">Quem somos?</a></li>
+          <li><a class="header__menu-item" href="#pr_sec">Assuntos</a></li>
+          <li><a class="header__menu-item" href="#protfolio_sec">Soluções</a></li>
+          <li><a class="header__menu-item btn btn--white" href="#skill_sec">Planos</a></li>
           {% if user.is_authenticated %}
-            <li class="header__menu__item dropdown" style="float:right;  padding-right: 20px;">
+            <li class="header__menu-item dropdown" style="float:right;  padding-right: 20px;">
               <a href="javascript:void(0)" class="dropbtn">Usuario: {{ user }}</a>
               <div class="dropdown-content">
                 <a href="{% url 'logout' %}">Logout</a>
@@ -27,7 +29,7 @@
               </div>
             </li>
           {% else %}
-            <li><a class="header__menu__item" href="#tm_sec">Entrar</a></li>
+            <li><a class="header__menu-item btn" href="#tm_sec">Entrar</a></li>
           {% endif%}
         </ul>
       </div>

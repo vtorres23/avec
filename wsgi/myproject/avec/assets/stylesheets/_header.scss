@@ -1,0 +1,36 @@
+.header {
+  min-height: 50px;
+
+  &__navbar {
+    background-color: $white;
+    border-color: $white;
+    margin-top: 10px;
+    min-height: 28px;
+  }
+
+  &__brand {
+    float: left;
+    height: 24px;
+    width: 77px;
+  }
+
+  &__menu {
+    float: right;
+  }
+
+  &__nav {
+    li {
+      margin-left: 15px;
+    }
+  }
+
+  .navbar-default &__menu-item {
+    font-size: $base-font-size;
+    padding: 5px 15px;
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    color: $denim;
+  }
+
+}
