@@ -1,7 +1,11 @@
 .banner-search {
-  background: $white url('../../img/banner-icons.png') no-repeat right 10px;
-  background-size: contain;;
   min-height: 400px;
+
+  .container {
+    background: $white url('../../img/banner-icons.png') no-repeat right 10px;
+    background-size: contain;
+    min-height: 400px;
+  }
 
   &__text {
     margin-top: 100px;
