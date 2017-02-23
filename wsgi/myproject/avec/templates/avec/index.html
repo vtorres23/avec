@@ -3,19 +3,19 @@
 {% load staticfiles %}
 
 {% block content %}
-  <div class="container">
-    <div class="row">
-      <div>
-        <div>
-          <h2>Encontre fácilmente todos dados para suas pesquisas</h2>
-          <p>Indicadores, estatisticas e previsões baseadas em informações ativas e descobertas continuas.</p>
+  <section class="banner-search">
+    <div class="container">
+      <div class="row">
+        <div class="banner-search__text">
+          <h2 class="banner-search__title">Encontre fácilmente todos dados para suas pesquisas</h2>
+          <p class="banner-search__subtitle">Indicadores, estatisticas e previsões baseadas em informações ativas e descobertas continuas.</p>
+        </div>
+        <div class="banner-search__search">
+          <form action="" class="banner-search__form">
+            <input class="banner-search__input-search" type="text" placeholder="Encontre estatisticas, dados e estudos" />
+          </form>
         </div>
       </div>
-      <div>
-        <form action="">
-          <input type="text" placeholder="Encontre estatisticas, dados e estudos" />
-        </form>
-      </div>
     </div>
-  </div>
+  </section>
 {% endblock %}
