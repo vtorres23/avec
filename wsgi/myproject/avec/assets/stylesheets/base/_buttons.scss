@@ -44,4 +44,13 @@
       color: $white !important;
     }
   }
+
+  &--blue {
+    background-color: $denim;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($denim, .8) !important;;
+    }
+  }
 }
