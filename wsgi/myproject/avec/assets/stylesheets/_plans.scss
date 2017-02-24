@@ -1,0 +1,110 @@
+.plans {
+  background: $light-navy-blue;
+  background: -moz-linear-gradient(top, $light-navy-blue 0%, $dark2 100%);
+  background: -webkit-linear-gradient(top, $light-navy-blue 0%,$dark2 100%);
+  background: linear-gradient(to bottom, $light-navy-blue 0%,$dark2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$light-navy-blue', endColorstr='$dark2',GradientType=0 );
+  padding: 30px 0 50px;
+
+  &__title {
+    color: $white;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 50px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+  }
+
+  &__box {
+    background-color: $white;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba($black, .4), 0 0 2px 0 rgba($black, .3);
+    padding: 20px 0px;
+    max-width: 288px;
+
+  }
+
+  &__price-title {
+    color: $denim;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid $cloudy-blue;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  &__price {
+    color: $denim;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__currency {
+    font-size: 16px;
+    vertical-align: top;
+    display: inline-block;
+    margin: 9px 5px 0 0;
+  }
+
+  &__time {
+    font-size: 16px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0 0px;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+    padding: 5px 30px 5px 30px;
+
+    &--selected {
+
+      &::before {
+        content: url('../../img/icon-checked.svg');
+        float: left;
+        position: relative;
+        width: 14px;
+        height: 12px;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--no-selected {
+      text-decoration: line-through;
+
+      a {
+        color: $cloudy-blue !important;
+      }
+    }
+  }
+
+  &__link {
+    margin-left: 20px;
+    padding-left: 10px;
+    width: 90%;
+    display: block;
+
+  }
+
+  &__sign {
+    width: 90%;
+    margin: 20px auto 20px 5%;
+    line-height: 1.25;
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
