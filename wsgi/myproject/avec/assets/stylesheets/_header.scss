@@ -41,7 +41,12 @@
 
       @include mobile(small) {
         margin-bottom: 20px;
+        margin: 0 0 20px 0;
       }
+    }
+
+    @include mobile(small) {
+      margin: 20px 0 0;
     }
   }
 
