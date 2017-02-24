@@ -1,0 +1,43 @@
+.footer {
+  background-color: $dark2;
+  padding: 20px 0;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+  }
+
+  &__logo {
+    width: 80%;
+  }
+
+  &__logo-img {
+    float: left;
+  }
+
+  &__address {
+    border-left: 1px solid $denim;
+    float: left;
+    padding-left: 20px;
+    margin-left: 20px;
+    display: block;
+    color: $white;
+    font-size: 12px;
+  }
+
+  &__social {
+    color: $white;
+
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+    }
+
+
+  }
+}
