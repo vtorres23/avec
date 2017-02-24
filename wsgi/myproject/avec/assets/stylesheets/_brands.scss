@@ -20,6 +20,7 @@
 
     @include mobile(small) {
       display: block;
+      padding: 0;
     }
   }
 
