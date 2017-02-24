@@ -3,7 +3,9 @@
 To run this project you need to have:
 
 - Python 2.7.x
-
+- NODE v7.3.0++ [https://nodejs.org/en/](https://nodejs.org/en/)
+- NPM 3.10.10++
+-
 ## Setup the project
 
 1. Install the depedencies above
@@ -27,7 +29,11 @@ If everything goes OK, you can now run the project!
 
         $ make run
 
-1. Open [http://localhost:8000](http://localhost:8000).
+1. Start the node.
+
+        $ npm start
+
+1. Open [http://localhost:3000](http://localhost:3000). or [http://localhost:8000](http://localhost:8000).
 
 
 ===================
